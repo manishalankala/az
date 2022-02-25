@@ -3,21 +3,21 @@
 
 az login
 
-az aks get-versions --location $REGION -o table      # Get k8s available versions
+az aks get-versions --location $REGION -o table                                                                 # Get k8s available versions
 
-az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME  # To configure kubectl to connect to your Kubernetes cluster
+az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME                                    # To configure kubectl to connect to your Kubernetes cluster
 
-az aks browse --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME   # Open k8s Dashboard
+az aks browse --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME                                             # Open k8s Dashboard
 
-az aks show  --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME -o table  # Get AKS Cluster info
+az aks show  --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME -o table                                     # Get AKS Cluster info
 
-az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --query nodeResourceGroup -o tsv  # Get Node Resource Group
+az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --query nodeResourceGroup -o tsv              # Get Node Resource Group
 
-az aks scale --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --node-count $NODE_COUNT     # Scale AKS Cluster nodes
+az aks scale --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --node-count $NODE_COUNT                     # Scale AKS Cluster nodes
 
 az aks upgrade --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --kubernetes-version $KUBERNETS_VERSION    # Upgrade AKS Cluster version
 
-az aks get-upgrades --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP -o table  # Check which Kubernetes releases are available for upgrade for your AKS cluster
+az aks get-upgrades --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP -o table                              # Check which Kubernetes releases are available for upgrade for your AKS cluster
 
 
 # ACR
