@@ -11,8 +11,7 @@
 | az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --query nodeResourceGroup -o tsv | Get Node Resource Group |
 | az aks scale --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --node-count $NODE_COUNT | Scale AKS Cluster nodes |
 | az aks upgrade --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --kubernetes-version $KUBERNETS_VERSION | Upgrade AKS Cluster version |
-| az aks get-upgrades --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP -o table | Check which Kubernetes releases are available for upgrade for your AKS cluster
- |
+| az aks get-upgrades --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP -o table | Check which Kubernetes releases are available for upgrade for your AKS cluster|
 
 
 
