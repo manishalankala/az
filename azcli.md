@@ -5,13 +5,16 @@
 | ------------- | ------------- |
 | az login | Login |
 | az aks get-versions --location $REGION -o table | Get k8s available versions |
-| git status | List all new or modified files |
-| git status | List all new or modified files |
-| git status | List all new or modified files |
-| git status | List all new or modified files |
-| git status | List all new or modified files |
-| git status | List all new or modified files |
-
+| az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME | To configure kubectl to connect to your Kubernetes cluster |
+| az aks browse --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME | Open k8s Dashboard |
+| az aks show  --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME -o table | Get AKS Cluster info |
+| az aks show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --query nodeResourceGroup -o tsv | Get Node Resource Group |
+| az aks scale --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --node-count $NODE_COUNT | Scale AKS Cluster nodes |
+| git status |  |
+| git status |  |
+| git status |  |
+| git status |  |
+| git status |  |
 
 
 
